@@ -36,16 +36,19 @@ if (backTop){
   /* ---------- Mobile menu ---------- */
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
+   if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navLinks.classList.toggle('open');
   });
+
   navLinks.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
       hamburger.classList.remove('open');
       navLinks.classList.remove('open');
     }
   });
+}
 
   /* ---------- Theme toggle ---------- */
   const themeBtn = document.getElementById('themeToggle');
@@ -57,12 +60,19 @@ if (backTop){
       ? '<i class="fa-solid fa-sun"></i>'
       : '<i class="fa-solid fa-moon"></i>';
   };
+  if (themeBtn) {
   applyTheme(savedTheme);
+
   themeBtn.addEventListener('click', () => {
-    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    const next =
+      document.documentElement.dataset.theme === 'dark'
+        ? 'light'
+        : 'dark';
+
     localStorage.setItem('theme', next);
     applyTheme(next);
   });
+}
 
   /* ---------- Cursor glow ---------- */
   const glow = document.getElementById('cursorGlow');
@@ -193,23 +203,10 @@ if (backTop){
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
-
-  /* ---------- Carousel ---------- */
-  const carousel = document.getElementById('carousel');
-  const slides = carousel.querySelector('.slides');
-  const total = slides.children.length;
-  let idx = 0;
-  const go = (n) => {
-    idx = (n + total) % total;
-    slides.style.transform = `translateX(-${idx * 100}%)`;
-  };
-  carousel.querySelector('.next').addEventListener('click', () => go(idx + 1));
-  carousel.querySelector('.prev').addEventListener('click', () => go(idx - 1));
-  setInterval(() => go(idx + 1), 6000);
-
   /* ---------- Contact form (validation + EmailJS-ready) ---------- */
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
+   if (form && status) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
@@ -226,7 +223,7 @@ if (backTop){
     form.reset();
     setTimeout(() => { status.textContent = ''; status.className = 'form-status'; }, 5000);
   });
-
+   }
   /* ---------- Smooth anchor scroll (native via CSS, fallback for offset) ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
