@@ -1,7 +1,6 @@
 /* =====================================================
    DataLeaf Portfolio — Interactions
    ===================================================== */
-console.log("JS loaded successfully");
 (function () {
   'use strict';
 
