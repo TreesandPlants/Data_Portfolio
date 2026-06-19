@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of an aspiring Data Analyst passionate about environmental awareness — turning data into meaningful insights." />
+  <meta name="author" content="Data Analyst Portfolio" />
+  <meta name="theme-color" content="#0b2a3b" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aspiring Data Analyst — Environmental Portfolio" />
+  <meta property="og:description" content="Turning Data into Meaningful Insights — Data Analytics meets Environmental Awareness." />
+  <meta property="og:type" content="website" />
+
+  <title>Parthiban Portfolio</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/12663/12663333.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" >
+</head>
+<body>
+  <!-- ===== Loading Screen ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-leaf"><i class="fa-solid fa-leaf"></i></div>
+    <p>Loading insights…</p>
+  </div>
+
+  <!-- ===== Scroll Progress Indicator ===== -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- ===== Cursor Glow ===== -->
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== Navigation ===== -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Data<strong>Analytics</strong></span>
+      </a>
+
+      <nav>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="hamburger" class="icon-btn hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="">
+      <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-forest-2633/1080p.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <!-- Particles canvas -->
+    <canvas id="particles" class="particles"></canvas>
+
+    <!-- Floating creatures -->
+    <div class="creatures" aria-hidden="true">
+      <div class="bird b1"><i class="fa-solid fa-dove"></i></div>
+      <div class="bird b2"><i class="fa-solid fa-dove"></i></div>
+      <div class="bird b3"><i class="fa-solid fa-dove"></i></div>
+      <div class="leaf l1"><i class="fa-solid fa-leaf"></i></div>
+      <div class="leaf l2"><i class="fa-solid fa-leaf"></i></div>
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+    </div>
+
+    <div class="hero-content" data-parallax>
+      <p class="eyebrow">Hello, I'm Parthiban</p>
+      <h1>
+        <span class="line">Aspiring Data Analyst</span>
+        <span class="typed" id="typed"></span>
+      </h1>
+      <p class="hero-sub">Turning raw numbers into stories that protect our planet.</p>
+      <div class="hero-ctas">
+        <a href="#certifications" class="btn btn-primary"><i class="fa-solid fa-chart-column"></i> View Ceritifications</a>
+        <a href="#contact" class="btn btn-ghost"><i class="fa-regular fa-envelope"></i> Contact Me</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-image" data-aos="fade-right">
+        <div class="glass image-frame">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQEsnRC68hycIQ/profile-displayphoto-shrink_100_100/B4EZTRI2jpHUAc-/0/1738675547756?e=1783555200&v=beta&t=4xGvzKbUJ7-b6yj5Cqq4it0Nr0o30y6W11vs8927_1A" alt="Portrait of Parthiban, Data Analyst" loading="lazy" />
+        </div>
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <p class="eyebrow"><i class="fa-solid fa-seedling"></i> About Me</p>
+        <h2>Aspiring Data Analyst</h2>
+        <p>I'm an aspiring data analyst in the making, blending analytical rigor. I use SQL, Python, and Excel.</p>
+        <p><strong>Career objective:</strong> To explore the mysterical data patterns and try to figure out the solutions with my predictions.</p>
+        <p><strong>Environmental passion:</strong> Every dataset I touch is an opportunity to make conservation smarter, faster, and more accountable.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <header class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><i class="fa-solid fa-layer-group"></i> Skills</p>
+        <h2>Tools I use to grow ideas</h2>
+      </header>
+
+      <div class="skills-grid">
+        <article class="skill-card glass" data-aos="fade-up">
+          <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis</h3>
+          <div class="bars">
+            <div class="bar"><span>Excel</span><div class="track"><i style="--w:92%"></i></div></div>
+            <div class="bar"><span>SQL</span><div class="track"><i style="--w:88%"></i></div></div>
+            <div class="bar"><span>Python</span><div class="track"><i style="--w:75%"></i></div></div>
+          </div>
+        </article>
+
+        <article class="skill-card glass" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="fa-solid fa-code"></i> Web Development</h3>
+          <div class="bars">
+            <div class="bar"><span>HTML</span><div class="track"><i style="--w:95%"></i></div></div>
+            <div class="bar"><span>CSS</span><div class="track"><i style="--w:90%"></i></div></div>
+            <div class="bar"><span>JavaScript</span><div class="track"><i style="--w:50%"></i></div></div>
+            <div class="bar"><span>React</span><div class="track"><i style="--w:30%"></i></div></div>
+          </div>
+        </article>
+
+        <article class="skill-card glass" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fa-solid fa-handshake"></i> Soft Skills</h3>
+          <div class="bars">
+            <div class="bar"><span>Communication</span><div class="track"><i style="--w:90%"></i></div></div>
+            <div class="bar"><span>Problem Solving</span><div class="track"><i style="--w:93%"></i></div></div>
+            <div class="bar"><span>Teamwork</span><div class="track"><i style="--w:88%"></i></div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" hidden>
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <img id="lightboxImg" alt="" />
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE TIMELINE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <header class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><i class="fa-solid fa-timeline"></i> Experience</p>
+        <h2>The journey so far</h2>
+      </header>
+
+      <ol class="timeline">
+        <li data-aos="fade-up">
+          <div class="dot"></div>
+          <div class="card glass">
+            <h3>B.Tech Computer science and Business Systems</h3>
+            <span>2024 - 2028 present · Ramco Institute of Technology</span>
+            <p>Understanding the models and insights of datas and business systems.</p>
+          </div>
+        </li>
+        <li data-aos="fade-up">
+          <div class="dot"></div>
+          <div class="card glass">
+            <h3>Full Stack Intern — Digisailor</h3>
+            <span>Summer 2026</span>
+            <p>Understanding about web development and it's applications.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section alt">
+    <div class="container">
+      <header class="section-head" data-aos="fade-up">
+        <p class="eyebrow"><i class="fa-solid fa-certificate"></i> Certifications</p>
+        <h2>Verified credentials</h2>
+      </header>
+
+      <div class="cert-grid">
+        <article class="cert-card glass" data-aos="flip-up">
+          <i class="fa-solid fa-award cert-icon"></i>
+          <h3>Introduction to HTML5</h3>
+          <p>Coursera · 2025</p>
+          <div class="cert-actions">
+            <a href="https://www.coursera.org/account/accomplishments/verify/GU60F536PTUK" class="btn btn-sm">Verify</a>
+            <a href="certificates/HTML5.pdf" download class="btn btn-sm btn-primary">Download</a>
+          </div>
+        </article>
+        <article class="cert-card glass" data-aos="flip-up" data-aos-delay="100">
+          <i class="fa-solid fa-award cert-icon"></i>
+          <h3>Java(Basic)</h3>
+          <p>HackerRank · 2025</p>
+          <div class="cert-actions">
+            <a href="https://www.hackerrank.com/certificates/982045fc0797" class="btn btn-sm">Verify</a>
+            <a href="certificates/Java(Basic).pdf" class="btn btn-sm btn-primary">Download</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section alt">
+    <div class="container contact-grid">
+      <div data-aos="fade-right">
+        <p class="eyebrow"><i class="fa-regular fa-envelope"></i> Contact</p>
+        <h2>Let's build something meaningful</h2>
+        <p>Have a dataset that needs a story? I'd love to hear about it.</p>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-envelope"></i>parthiban07nature@gmail.com</li>
+          <li><i class="fa-solid fa-location-dot"></i>Tuticorin, TamilNadu, India</li>
+          <li><i class="fa-brands fa-linkedin"></i> linkedin.com/in/parthiban-duraisamy</li>
+        </ul>
+      </div>
+
+      <form id="contactForm" class="glass contact-form" data-aos="fade-left" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" maxlength="100" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required maxlength="120" />
+        </div>
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required maxlength="120" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required maxlength="1000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Data<strong>Analytics</strong></span>
+        </a>
+        <p>Analytics for a better future.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="https://github.com/TreesandPlants" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/parthiban-duraisamy-b73641341/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Data <strong>Analytics.</strong>Crafted with care.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
